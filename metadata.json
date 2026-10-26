@@ -1,0 +1,6 @@
+{
+  "name": "New Year Party Registration System 2027",
+  "description": "ระบบลงทะเบียนงานเลี้ยงปีใหม่ 2027 พร้อมระบบสุ่มหมายเลขของขวัญ เชื่อมต่อ Google Sheets และ Google Apps Script จัดการข้อมูลโรงงานและรายงานสรุป",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

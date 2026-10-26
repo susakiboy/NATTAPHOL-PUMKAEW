@@ -1,0 +1,169 @@
+{
+  "registrations": [
+    {
+      "id": "REG-1793003319458-1355",
+      "employeeId": "00999",
+      "firstName": "ธนกฤต",
+      "lastName": "พงษ์พิพัฒน์",
+      "fullName": "ธนกฤต พงษ์พิพัฒน์",
+      "department": "วิศวกรรมการผลิต",
+      "factoryId": "FAC-04",
+      "factoryNameSnapshot": "โรงงานแหลมฉบัง (ชลบุรี)",
+      "assignedNumber": 310,
+      "registrationTimestamp": "26/10/2569 15:28:39",
+      "registrationStatus": "ACTIVE",
+      "updatedTimestamp": "26/10/2569 15:28:39"
+    },
+    {
+      "id": "REG-20261026-0001-4821",
+      "employeeId": "00101",
+      "firstName": "ก้องเกียรติ",
+      "lastName": "วราลักษณ์",
+      "fullName": "ก้องเกียรติ วราลักษณ์",
+      "department": "เทคโนโลยีสารสนเทศ (IT)",
+      "factoryId": "FAC-01",
+      "factoryNameSnapshot": "สำนักงานใหญ่ (กรุงเทพฯ)",
+      "assignedNumber": 108,
+      "registrationTimestamp": "2026-10-26 09:15:30",
+      "registrationStatus": "ACTIVE",
+      "updatedTimestamp": "2026-10-26 09:15:30"
+    },
+    {
+      "id": "REG-20261026-0002-7312",
+      "employeeId": "00452",
+      "firstName": "สมศรี",
+      "lastName": "รุ่งเรืองยิ่ง",
+      "fullName": "สมศรี รุ่งเรืองยิ่ง",
+      "department": "ฝ่ายผลิตและคุณภาพ (QA)",
+      "factoryId": "FAC-02",
+      "factoryNameSnapshot": "โรงงานบางปะกง (ฉะเชิงเทรา)",
+      "assignedNumber": 312,
+      "registrationTimestamp": "2026-10-26 09:22:14",
+      "registrationStatus": "ACTIVE",
+      "updatedTimestamp": "2026-10-26 09:22:14"
+    },
+    {
+      "id": "REG-20261026-0003-8890",
+      "employeeId": "00683",
+      "firstName": "นพพล",
+      "lastName": "เจริญสุข",
+      "fullName": "นพพล เจริญสุข",
+      "department": "คลังสินค้าและโลจิสติกส์",
+      "factoryId": "FAC-03",
+      "factoryNameSnapshot": "โรงงานโรจนะ (อยุธยา)",
+      "assignedNumber": 528,
+      "registrationTimestamp": "2026-10-26 09:30:05",
+      "registrationStatus": "ACTIVE",
+      "updatedTimestamp": "2026-10-26 09:30:05"
+    },
+    {
+      "id": "REG-20261026-0004-9124",
+      "employeeId": "00711",
+      "firstName": "ปิยะมาศ",
+      "lastName": "ประเสริฐศิลป์",
+      "fullName": "ปิยะมาศ ประเสริฐศิลป์",
+      "department": "ฝ่ายทรัพยากรบุคคล (HR)",
+      "factoryId": "FAC-01",
+      "factoryNameSnapshot": "สำนักงานใหญ่ (กรุงเทพฯ)",
+      "assignedNumber": 64,
+      "registrationTimestamp": "2026-10-26 09:45:50",
+      "registrationStatus": "ACTIVE",
+      "updatedTimestamp": "2026-10-26 09:45:50"
+    }
+  ],
+  "factories": [
+    {
+      "id": "FAC-01",
+      "code": "HQ",
+      "name": "สำนักงานใหญ่ (กรุงเทพฯ)",
+      "active": true,
+      "createdAt": "2026-10-26T08:27:21.707Z",
+      "updatedAt": "2026-10-26T08:27:21.707Z"
+    },
+    {
+      "id": "FAC-02",
+      "code": "BKP",
+      "name": "โรงงานบางปะกง (ฉะเชิงเทรา)",
+      "active": true,
+      "createdAt": "2026-10-26T08:27:21.707Z",
+      "updatedAt": "2026-10-26T08:27:21.707Z"
+    },
+    {
+      "id": "FAC-03",
+      "code": "AYU",
+      "name": "โรงงานโรจนะ (อยุธยา)",
+      "active": true,
+      "createdAt": "2026-10-26T08:27:21.707Z",
+      "updatedAt": "2026-10-26T08:27:21.707Z"
+    },
+    {
+      "id": "FAC-04",
+      "code": "LCH",
+      "name": "โรงงานแหลมฉบัง (ชลบุรี)",
+      "active": true,
+      "createdAt": "2026-10-26T08:27:21.707Z",
+      "updatedAt": "2026-10-26T08:27:21.707Z"
+    },
+    {
+      "id": "FAC-05",
+      "code": "KRT",
+      "name": "โรงงานโคราช (นครราชสีมา)",
+      "active": true,
+      "createdAt": "2026-10-26T08:27:21.707Z",
+      "updatedAt": "2026-10-26T08:27:21.707Z"
+    }
+  ],
+  "settings": {
+    "minNumber": 1,
+    "maxNumber": 1000,
+    "registrationOpen": true,
+    "eventName": "New Year Party 2027",
+    "eventYear": 2027,
+    "confirmationMessage": "ยินดีต้อนรับสู่งานเลี้ยงสังสรรค์ส่งท้ายปีเก่าต้อนรับปีใหม่ 2027 สัญลักษณ์แห่งความสำเร็จและความก้าวหน้า!",
+    "registrationDeadline": "",
+    "retainCancelledNumbers": true
+  },
+  "admins": [
+    {
+      "id": "ADM-01",
+      "email": "jnsmedia.organizer@gmail.com",
+      "role": "SUPER_ADMIN",
+      "active": true
+    },
+    {
+      "id": "ADM-02",
+      "email": "admin@company.com",
+      "role": "SUPER_ADMIN",
+      "active": true
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "LOG-1793003351241-586",
+      "timestamp": "26/10/2569 15:29:11",
+      "adminEmail": "jnsmedia.organizer@gmail.com",
+      "action": "ADMIN_LOGIN",
+      "targetType": "AUTH",
+      "targetId": "ADM-01",
+      "details": "Admin successfully logged in."
+    },
+    {
+      "id": "LOG-1793003319458-948",
+      "timestamp": "26/10/2569 15:28:39",
+      "adminEmail": "PUBLIC",
+      "action": "REGISTRATION_SUCCESS",
+      "targetType": "REGISTRATION",
+      "targetId": "REG-1793003319458-1355",
+      "details": "Assigned number #310 to ธนกฤต พงษ์พิพัฒน์ (00999)"
+    },
+    {
+      "id": "LOG-INIT",
+      "timestamp": "2026-10-26T08:27:21.707Z",
+      "adminEmail": "SYSTEM",
+      "action": "DATABASE_INITIALIZED",
+      "targetType": "SYSTEM",
+      "targetId": "INIT",
+      "details": "System initialized with default schema and active factories."
+    }
+  ]
+}
