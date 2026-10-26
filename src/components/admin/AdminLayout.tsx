@@ -181,6 +181,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({
             onNavigateToRegistrations={() => setActiveTab('registrations')}
             onNavigateToFactories={() => setActiveTab('factories')}
             onNavigateToSettings={() => setActiveTab('number-settings')}
+            onNavigateToGas={() => setActiveTab('gas')}
           />
         )}
 

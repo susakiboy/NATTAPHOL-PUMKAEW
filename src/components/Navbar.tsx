@@ -1,10 +1,10 @@
 import React from 'react';
-import { Sparkles, Shield, FileSpreadsheet, Search, UserCheck } from 'lucide-react';
+import { Sparkles, Shield, Search, UserCheck } from 'lucide-react';
 import { AdminUser } from '../types';
 
 interface NavbarProps {
-  currentView: 'register' | 'admin' | 'gas-guide';
-  setCurrentView: (view: 'register' | 'admin' | 'gas-guide') => void;
+  currentView: 'register' | 'admin';
+  setCurrentView: (view: 'register' | 'admin') => void;
   onOpenLookup: () => void;
   adminUser: AdminUser | null;
   onOpenAdminLogin: () => void;
@@ -25,7 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Zone 1: Brand title, one line */}
         <button
           onClick={() => setCurrentView('register')}
-          className="flex items-center gap-2.5 text-left group whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity"
+          className="flex items-center gap-2.5 text-left group whitespace-nowrap shrink-0 hover:opacity-90 transition-opacity cursor-pointer"
         >
           <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-slate-950 shadow-md">
             <Sparkles className="w-5 h-5" />
@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
           <button
             onClick={() => setCurrentView('register')}
-            className={`whitespace-nowrap shrink-0 transition-colors ${
+            className={`whitespace-nowrap shrink-0 transition-colors cursor-pointer ${
               currentView === 'register'
                 ? 'text-amber-400 font-semibold'
                 : 'hover:text-white'
@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={onOpenLookup}
-            className="whitespace-nowrap shrink-0 hover:text-white transition-colors flex items-center gap-1.5"
+            className="whitespace-nowrap shrink-0 hover:text-white transition-colors flex items-center gap-1.5 cursor-pointer"
           >
             <Search className="w-4 h-4 text-slate-400" />
             <span>ตรวจสอบหมายเลข</span>
@@ -63,26 +63,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <button
             onClick={() => setCurrentView('admin')}
-            className={`whitespace-nowrap shrink-0 transition-colors flex items-center gap-1.5 ${
+            className={`whitespace-nowrap shrink-0 transition-colors flex items-center gap-1.5 cursor-pointer ${
               currentView === 'admin'
                 ? 'text-amber-400 font-semibold'
                 : 'hover:text-white'
             }`}
           >
             <Shield className="w-4 h-4 text-slate-400" />
-            <span>แดชบอร์ดผู้ดูแลระบบ</span>
-          </button>
-
-          <button
-            onClick={() => setCurrentView('gas-guide')}
-            className={`whitespace-nowrap shrink-0 transition-colors flex items-center gap-1.5 ${
-              currentView === 'gas-guide'
-                ? 'text-amber-400 font-semibold'
-                : 'hover:text-white'
-            }`}
-          >
-            <FileSpreadsheet className="w-4 h-4 text-slate-400" />
-            <span>Google Sheets & Code</span>
+            <span>ระบบผู้ดูแลระบบ (Admin)</span>
           </button>
         </nav>
 

@@ -9,6 +9,7 @@ interface AdminDashboardViewProps {
   onNavigateToRegistrations: () => void;
   onNavigateToFactories: () => void;
   onNavigateToSettings: () => void;
+  onNavigateToGas: () => void;
 }
 
 export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({
@@ -17,6 +18,7 @@ export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({
   onNavigateToRegistrations,
   onNavigateToFactories,
   onNavigateToSettings,
+  onNavigateToGas,
 }) => {
   const [toggling, setToggling] = useState(false);
 
@@ -242,6 +244,29 @@ export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({
             )}
           </div>
         </div>
+      </div>
+
+      {/* Google Sheets Integration Quick Access Card */}
+      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-5 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+            <Building2 className="w-5 h-5" />
+          </div>
+          <div>
+            <h4 className="text-sm font-bold text-white">ระบบเชื่อมต่อ Google Sheets & Apps Script</h4>
+            <p className="text-xs text-slate-400 mt-0.5">
+              จัดการสิทธิ์การเชื่อมต่อ Web App URL คัดลอกโค้ดสคริปต์ และตรวจสอบโครงสร้างตารางทั้ง 5 แผ่น
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={onNavigateToGas}
+          className="px-4 py-2 text-xs font-semibold text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-xl transition-colors shadow-xs flex items-center justify-center gap-1.5 cursor-pointer shrink-0"
+        >
+          <span>เปิดหน้าจัดการ Google Sheets & Code</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </button>
       </div>
     </div>
   );

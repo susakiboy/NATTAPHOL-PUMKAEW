@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { getGasUrl, setGasUrl } from '../../services/api';
+import { getGasUrl, setGasUrl, parseJsonResponse } from '../../services/api';
 import { FileSpreadsheet, Copy, Check, ExternalLink, Link2, Terminal, Shield, CheckCircle2, AlertCircle } from 'lucide-react';
 
 // Preloaded script contents for fast copying
@@ -102,7 +102,7 @@ export const GasSetupGuideView: React.FC = () => {
     setTestResult(null);
     try {
       const res = await fetch(`${urlInput.trim()}?action=getPublicConfig`);
-      const json = await res.json();
+      const json = await parseJsonResponse(res);
       if (json.success) {
         setTestResult({
           success: true,

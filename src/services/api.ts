@@ -43,6 +43,23 @@ export function setStoredAdminEmail(email: string) {
   }
 }
 
+export async function parseJsonResponse(res: Response): Promise<any> {
+  const text = await res.text();
+  try {
+    return JSON.parse(text);
+  } catch (err: any) {
+    if (text.trim().startsWith('<') || text.includes('<!DOCTYPE')) {
+      if (text.includes('accounts.google.com') || text.includes('Sign in') || text.includes('ServiceLogin')) {
+        throw new Error(
+          'Google Apps Script ส่งกลับมาเป็นหน้า Login ของ Google แทนที่จะเป็น JSON เนื่องจากตอน Deploy ไม่ได้เลือก "Who has access: Anyone" (ทุกคน) หรือใช้ URL ที่ลงท้ายด้วย /dev'
+        );
+      }
+      throw new Error('เซิร์ฟเวอร์ส่งกลับมาเป็นหน้าเว็บ HTML (<!DOCTYPE) แทนข้อมูล JSON ตรวจสอบ URL ของ Google Apps Script Web App');
+    }
+    throw new Error(`ไม่สามารถแปลงข้อมูลเป็น JSON ได้: ${err.message}`);
+  }
+}
+
 class ApiService {
   private getHeaders(adminEmail?: string): Record<string, string> {
     const headers: Record<string, string> = {
