@@ -139,6 +139,15 @@
   ],
   "auditLogs": [
     {
+      "id": "LOG-1793005907708-311",
+      "timestamp": "26/10/2569 16:11:47",
+      "adminEmail": "jnsmedia.organizer@gmail.com",
+      "action": "ADMIN_LOGIN",
+      "targetType": "AUTH",
+      "targetId": "ADM-01",
+      "details": "Admin successfully logged in."
+    },
+    {
       "id": "LOG-1793003351241-586",
       "timestamp": "26/10/2569 15:29:11",
       "adminEmail": "jnsmedia.organizer@gmail.com",

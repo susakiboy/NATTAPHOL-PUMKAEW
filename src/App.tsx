@@ -7,11 +7,10 @@ import { SuccessTicket } from './components/SuccessTicket';
 import { LookupModal } from './components/LookupModal';
 import { AdminLoginModal } from './components/admin/AdminLoginModal';
 import { AdminLayout } from './components/admin/AdminLayout';
-import { GasSetupGuideView } from './components/admin/GasSetupGuideView';
 import { RefreshCw, Sparkles, AlertCircle } from 'lucide-react';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'register' | 'admin' | 'gas-guide'>('register');
+  const [currentView, setCurrentView] = useState<'register' | 'admin'>('register');
   const [config, setConfig] = useState<PublicConfig | null>(null);
   const [loadingConfig, setLoadingConfig] = useState(true);
   const [confirmedRegistration, setConfirmedRegistration] = useState<Registration | null>(null);
@@ -124,12 +123,6 @@ export default function App() {
             </div>
           )
         )}
-
-        {currentView === 'gas-guide' && (
-          <main className="max-w-5xl mx-auto px-4 py-8">
-            <GasSetupGuideView />
-          </main>
-        )}
       </div>
 
       {/* Lookup Modal */}
@@ -162,36 +155,29 @@ export default function App() {
               <span>Powered by Google Sheets & Apps Script</span>
             </div>
 
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setIsLookupOpen(true)}
-              className="hover:text-slate-800 transition-colors cursor-pointer"
-            >
-              ค้นหาหมายเลขพนักงาน
-            </button>
-            <span>·</span>
-            <button
-              onClick={() => {
-                if (adminUser) {
-                  setCurrentView('admin');
-                } else {
-                  setIsAdminLoginOpen(true);
-                }
-              }}
-              className="hover:text-slate-800 transition-colors cursor-pointer"
-            >
-              ผู้ดูแลระบบ (Admin)
-            </button>
-            <span>·</span>
-            <button
-              onClick={() => setCurrentView('gas-guide')}
-              className="hover:text-slate-800 transition-colors cursor-pointer"
-            >
-              Google Sheets Setup
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => setIsLookupOpen(true)}
+                className="hover:text-slate-800 transition-colors cursor-pointer"
+              >
+                ค้นหาหมายเลขพนักงาน
+              </button>
+              <span>·</span>
+              <button
+                onClick={() => {
+                  if (adminUser) {
+                    setCurrentView('admin');
+                  } else {
+                    setIsAdminLoginOpen(true);
+                  }
+                }}
+                className="hover:text-slate-800 transition-colors cursor-pointer"
+              >
+                เข้าสู่ระบบผู้ดูแลระบบ (Admin)
+              </button>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
       )}
     </div>
   );
